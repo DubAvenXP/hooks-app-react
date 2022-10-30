@@ -7,14 +7,15 @@ export const TodoApp = () => {
         handleDeleteTodo,
         handleToggleTodo,
         handleNewTodo,
-        getPendingTodos,
+        pendingTodosCount,
+        todosCount,
     } = useTodo();
 
     return (
         <>
             <h1>
-                TodoApp ({todos.length}),
-                <small>Pendientes: ({getPendingTodos()})</small>
+                TodoApp ({todosCount()}),
+                <small>Pendientes: ({pendingTodosCount()})</small>
             </h1>
             <hr />
 

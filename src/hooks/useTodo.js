@@ -4,6 +4,8 @@ import { todoReducer } from "../08-useReducer/todoReducer";
 export const useTodo = () => {
     const initialState = [];
 
+
+
     const initializeTodos = () => {
         return JSON.parse(localStorage.getItem("todos")) || [];
     };
@@ -43,14 +45,16 @@ export const useTodo = () => {
         dispatch(action);
     };
 
-    const getPendingTodos = () =>
-        todos.reduce((acc, todo) => (todo.done ? acc : acc + 1), 0);
+    const pendingTodosCount = () => todos.reduce((acc, todo) => (todo.done ? acc : acc + 1), 0);
+    const todosCount = () => todos.length; 
+        
 
     return {
         todos,
         handleNewTodo,
         handleDeleteTodo,
         handleToggleTodo,
-        getPendingTodos,
+        pendingTodosCount,
+        todosCount,
     };
 };
