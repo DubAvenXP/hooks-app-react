@@ -1,7 +1,7 @@
 import { useFetch, useCounter } from "../hooks";
-import { LoadingQuote, Quote, QuoteActions } from "./components";
+import { LoadingQuote, Quote, QuoteActions } from "../03-examples/components";
 
-export const MultipleCustomHooks = () => {
+export const Layout = () => {
     const { counter, increment, decrement, reset } = useCounter(1);
 
     const { data, isLoading } = useFetch(
@@ -13,7 +13,7 @@ export const MultipleCustomHooks = () => {
 
     return (
         <>
-            <h1>BreakingBad Quotes</h1>
+            <h1>BreakingBad Quotes (Layout)</h1>
             <hr />
 
             <h4>Quote: #{counter}</h4>
