@@ -45,16 +45,12 @@ export const useTodo = () => {
         dispatch(action);
     };
 
-    const pendingTodosCount = () => todos.reduce((acc, todo) => (todo.done ? acc : acc + 1), 0);
-    const todosCount = () => todos.length; 
-        
-
     return {
         todos,
         handleNewTodo,
         handleDeleteTodo,
         handleToggleTodo,
-        pendingTodosCount,
-        todosCount,
+        pendingTodosCount: todos.reduce((acc, todo) => (todo.done ? acc : acc + 1), 0),
+        todosCount: todos.length,
     };
 };

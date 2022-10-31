@@ -14,8 +14,8 @@ export const TodoApp = () => {
     return (
         <>
             <h1>
-                TodoApp ({todosCount()}),
-                <small>Pendientes: ({pendingTodosCount()})</small>
+                TodoApp ({todosCount}),
+                <small>Pendientes: ({pendingTodosCount})</small>
             </h1>
             <hr />
 
