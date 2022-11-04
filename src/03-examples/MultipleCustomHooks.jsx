@@ -3,8 +3,7 @@ import { LoadingQuote, Quote, QuoteActions } from "./components";
 
 export const MultipleCustomHooks = () => {
     const { counter, increment, decrement, reset } = useCounter(1);
-
-    const { data, isLoading } = useFetch(
+    const { data, isLoading, hasError } = useFetch(
         `https://www.breakingbadapi.com/api/quotes/${counter}`
     );
 
