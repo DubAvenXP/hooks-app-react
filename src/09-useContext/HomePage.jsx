@@ -10,7 +10,7 @@ export const HomePage = () => {
             <p>
                 lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             </p>
-            <pre>
+            <pre aria-label="pre">
                 {JSON.stringify(user, null, 3)}
             </pre>
         </section>

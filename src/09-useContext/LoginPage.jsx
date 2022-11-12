@@ -17,7 +17,7 @@ export const LoginPage = () => {
         <section>
             <h2>Loginpage</h2>
             <hr />
-            <pre>{JSON.stringify(user, null, 3)}</pre>
+            <pre aria-label="pre" >{JSON.stringify(user, null, 3)}</pre>
 
             <button onClick={handleLogin} className="btn btn-primary">Establecer usuario</button>
         </section>
